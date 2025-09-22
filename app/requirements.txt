@@ -1,0 +1,6 @@
+fastapi
+uvicorn[standard]
+redis
+prometheus_client
+psycopg2-binary
+

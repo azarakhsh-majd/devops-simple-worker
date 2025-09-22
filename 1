@@ -1,0 +1,8 @@
+import os
+import redis
+
+
+r = redis.from_url(os.getenv('REDIS_URL','redis://localhost:6379/0'), decode_responses=False)
+for i in range(10):
+r.lpush('crawler_queue', f'http://example.com/seed/{i}')
+print('seeded 10 jobs')
