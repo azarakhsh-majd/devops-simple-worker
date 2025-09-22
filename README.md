@@ -15,7 +15,6 @@ curl http://localhost:8000/metrics | grep crawler
 curl http://localhost:8000/test-inc
 curl http://localhost:8000/metrics | grep crawler
 # for prometheous:
-
 docker run -d --name prometheus -p 9090:9090 -v $(pwd)/prometheus.yml:/etc/prometheus/prometheus.yml:ro   prom/prometheus:latest
  curl http://localhost:9090/targets
 
